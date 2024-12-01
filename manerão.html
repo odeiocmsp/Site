@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RafaellBarns</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center; /* Centraliza horizontalmente */
+      align-items: center; /* Centraliza verticalmente */
+      height: 100vh; /* Altura total da janela */
+      background-color: black; /* Fundo da página */
+      position: relative; /* Contexto de posicionamento */
+    }
+
+    /* Estilo da bola */
+    .bola {
+      width: 300px; /* Largura da bola */
+      height: 300px; /* Altura da bola */
+      border-radius: 50%; /* Deixa a bola circular */
+      background-image: url('https://cdn.discordapp.com/avatars/778985599314165760/b2bc8b843089a98baebbd6d797bfa12f.png?size=2048'); /* URL da imagem de fundo */
+      background-size: cover; /* Faz a imagem preencher a bola */
+      background-position: center; /* Centraliza a imagem na bola */
+      position: absolute; /* Permite posicionar a bola no fundo */
+      z-index: 0; /* Garante que fique atrás do texto */
+    }
+
+    /* Estilo do texto */
+    .texto {
+      font-size: 2rem; /* Tamanho da fonte */
+      font-weight: bold;
+      color: white; /* Cor padrão do texto */
+      font-family: 'Arial', sans-serif; /* Estilo da fonte */
+      position: relative; /* Mantém o texto acima da bola */
+      z-index: 1; /* Garante que o texto fique na frente */
+      animation: todasAsCores 5s infinite; /* Animação do texto */
+    }
+
+    /* Animação para as cores do texto */
+    @keyframes todasAsCores {
+      0% { color: red; }
+      10% { color: orange; }
+      20% { color: yellow; }
+      30% { color: lime; }
+      40% { color: green; }
+      50% { color: cyan; }
+      60% { color: blue; }
+      70% { color: indigo; }
+      80% { color: violet; }
+      90% { color: magenta; }
+      100% { color: red; }
+    }
+  </style>
+</head>
+<body>
+  <div class="bola"></div> <!-- Bola com imagem -->
+  <div class="texto">RafaellBarns</div> <!-- Texto colorido -->
+</body>
+</html>
