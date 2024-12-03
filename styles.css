@@ -18,14 +18,6 @@
       overflow: hidden;
     }
 
-    /* Container para a bola e o texto, garantindo que tudo esteja no centro */
-    .container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-    }
-
     /* Estilos para a bola (imagem circular) */
     .bola {
       width: 300px;
@@ -60,11 +52,11 @@
       z-index: 1;
       text-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 0, 0, 0.3); /* Sombra no texto */
       animation: todasAsCores 5s infinite; /* Animação de cores no texto */
-      letter-spacing: 2px; 
+      letter-spacing: 2px;
       position: relative;
     }
 
-   
+    /* Animação de troca de cores do texto */
     @keyframes todasAsCores {
       0% { color: red; }
       10% { color: orange; }
@@ -77,6 +69,29 @@
       80% { color: violet; }
       90% { color: magenta; }
       100% { color: red; }
+    }
+
+    /* Responsividade para telas menores */
+    @media (max-width: 768px) {
+      .bola {
+        width: 200px;
+        height: 200px;
+      }
+
+      .texto {
+        font-size: 2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .bola {
+        width: 150px;
+        height: 150px;
+      }
+
+      .texto {
+        font-size: 1.5rem;
+      }
     }
   </style>
 </head>
