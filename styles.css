@@ -1,1 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RafaellBarns</title>
+  <style>
+    /* Resetando a margin e o padding do body */
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #111; /* Fundo mais escuro para contrastar com os elementos */
+      position: relative;
+      overflow: hidden;
+    }
 
+    /* Estilos para a bola (imagem circular) */
+    .bola {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background-image: url('https://cdn.discordapp.com/avatars/778985599314165760/b2bc8b843089a98baebbd6d797bfa12f.png?size=2048');
+      background-size: cover;
+      background-position: center;
+      position: absolute;
+      z-index: 0;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.6); /* Sombra sutil ao redor da bola */
+      animation: pulsar 4s infinite ease-in-out; /* Efeito pulsante na bola */
+    }
+
+    /* Efeito de pulsação para a bola */
+    @keyframes pulsar {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    /* Estilos para o texto */
+    .texto {
+      font-size: 3rem;
+      font-weight: bold;
+      color: white;
+      font-family: 'Arial', sans-serif;
+      position: relative;
+      z-index: 1;
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 0, 0, 0.3); /* Sombra no texto */
+      animation: todasAsCores 5s infinite; /* Animação de cores no texto */
+      letter-spacing: 2px; /* Espaçamento entre as letras */
+    }
+
+    /* Animação de mudança de cor do texto */
+    @keyframes todasAsCores {
+      0% { color: red; }
+      10% { color: orange; }
+      20% { color: yellow; }
+      30% { color: lime; }
+      40% { color: green; }
+      50% { color: cyan; }
+      60% { color: blue; }
+      70% { color: indigo; }
+      80% { color: violet; }
+      90% { color: magenta; }
+      100% { color: red; }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="bola"></div>
+  <div class="texto">RafaellBarns</div>
+</body>
+</html>
