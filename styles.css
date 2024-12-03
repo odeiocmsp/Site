@@ -18,6 +18,14 @@
       overflow: hidden;
     }
 
+    /* Container para a bola e o texto, garantindo que tudo esteja no centro */
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
     /* Estilos para a bola (imagem circular) */
     .bola {
       width: 300px;
@@ -26,8 +34,6 @@
       background-image: url('https://cdn.discordapp.com/avatars/778985599314165760/b2bc8b843089a98baebbd6d797bfa12f.png?size=2048');
       background-size: cover;
       background-position: center;
-      position: absolute;
-      z-index: 0;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.6); /* Sombra sutil ao redor da bola */
       animation: pulsar 4s infinite ease-in-out; /* Efeito pulsante na bola */
     }
@@ -51,14 +57,14 @@
       font-weight: bold;
       color: white;
       font-family: 'Arial', sans-serif;
-      position: relative;
       z-index: 1;
       text-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 0, 0, 0.3); /* Sombra no texto */
       animation: todasAsCores 5s infinite; /* Animação de cores no texto */
-      letter-spacing: 2px; /* Espaçamento entre as letras */
+      letter-spacing: 2px; 
+      position: relative;
     }
 
-    /* Animação de mudança de cor do texto */
+   
     @keyframes todasAsCores {
       0% { color: red; }
       10% { color: orange; }
@@ -72,11 +78,12 @@
       90% { color: magenta; }
       100% { color: red; }
     }
-
   </style>
 </head>
 <body>
-  <div class="bola"></div>
-  <div class="texto">RafaellBarns</div>
+  <div class="container">
+    <div class="bola"></div>
+    <div class="texto">RafaellBarns</div>
+  </div>
 </body>
 </html>
